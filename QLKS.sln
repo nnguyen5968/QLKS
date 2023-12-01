@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLKS", "QLKS\QLKS.csproj", "{2F9EFEEA-248D-44E5-BE0A-868C1EBCEAAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLKS", "QLKS\QLKS.csproj", "{40DA7011-7C17-45F5-AD1E-F3C72D84319B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2F9EFEEA-248D-44E5-BE0A-868C1EBCEAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F9EFEEA-248D-44E5-BE0A-868C1EBCEAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F9EFEEA-248D-44E5-BE0A-868C1EBCEAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F9EFEEA-248D-44E5-BE0A-868C1EBCEAAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DA7011-7C17-45F5-AD1E-F3C72D84319B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DA7011-7C17-45F5-AD1E-F3C72D84319B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DA7011-7C17-45F5-AD1E-F3C72D84319B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DA7011-7C17-45F5-AD1E-F3C72D84319B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {87B6FA7E-AAA0-4CDE-B3D9-74D0A67BD83A}
+		SolutionGuid = {0663903F-0FB8-408A-9E49-076E14CB9DB0}
 	EndGlobalSection
 EndGlobal
