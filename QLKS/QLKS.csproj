@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F9EFEEA-248D-44E5-BE0A-868C1EBCEAAA}</ProjectGuid>
+    <ProjectGuid>{67084522-9FB2-4C48-B95D-8E3AB6559ED6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>QLKS</RootNamespace>
     <AssemblyName>QLKS</AssemblyName>
@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +55,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietPhieuThue.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiDichVu.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiPhong.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThuePhong.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuThuePhong.Designer.cs">
+      <DependentUpon>PhieuThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phong.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLKS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLKS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLKS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SuDungDichVu.cs">
+      <DependentUpon>QLKS.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThuePhong.resx">
+      <DependentUpon>PhieuThuePhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +127,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,9 +137,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="QLKS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLKS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLKS.edmx.diagram">
+      <DependentUpon>QLKS.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QLKS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QLKS.Context.cs</LastGenOutput>
+      <DependentUpon>QLKS.edmx</DependentUpon>
+    </Content>
+    <Content Include="QLKS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLKS.edmx</DependentUpon>
+      <LastGenOutput>QLKS.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
